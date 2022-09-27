@@ -11,56 +11,41 @@
 </head>
 
 <body>
-  <a href="#content" class="skip-link">Skip to Content</a>
-  <div class="wrapper">
-    <nav>
-      <div class="container-flex">
-        <div class="brand">
-            <a href="index.html">Restoding</a>
-         </div>
-         <div class="burger">
-            <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-         </div>
-         <div class="bg-sidebar"></div>
-         <ul class="sidebar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Favorite</a></li>
-            <li><a href="https://www.linkedin.com/in/mochammad-rafly-h-96317b140">About Us</a></li>
-         </ul>
-      </div>
-    </nav>
-  </div>
+  
+  <header>
+    <skip-link>
 
-  <!-- Header -->
-  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-    <img class="w3-image" src="./images/heros/hero-image_5.jpg" alt="Welcome">
-    <div class="w3-display-middle w3-margin-top w3-center">
-      <b class="welcome">Welcome to Restoding!</b>
+    </skip-link>
+      <nav id="drawer">
+      <a href="index.html" class="drawer-title">Restoding</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Favorite</a></li>
+        <li><a href="https://github.com/raflyherdianto" target="_blank" rel="noopener">About Us</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="app-bar__menu">
+      <button id="hamburger" type="button"><i class="fa-solid fa-bars"></i></button>
     </div>
   </header>
 
-  <!-- Page content -->
-  <div class="w3-content w3-padding" style="max-width:1564px">
+  <main>
 
-    <!-- Project Section -->
-    <div class="w3-container w3-padding-32" id="projects" align="center">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Explore Restaurant</h3>
-    </div>
+    <section class="jumbotron">
+      <h1 class="jumbotron-title">Welcome to Restoding!</h1>
+    </section>
 
-    <div class="w3-row-padding" id="content">
-    
-    </div>
+    <article id="content">
+      <h2>Explore Restaurant</h2>
+      <article class="wrapper"></article>
+    </article>
+  </main>
 
-    <!-- End page content -->
-  </div>
-
-
-  <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-16">
+  <footer>
     <p>Copyright © 2022 - Restoding</p>
   </footer>
+
 </body>
 
 </html>

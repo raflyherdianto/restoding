@@ -1,15 +1,20 @@
-const burger = document.querySelector('.burger')
-const sidebar = document.querySelector('.sidebar')
-const bgSidebar = document.querySelector('.bg-sidebar')
+const hamburgerButtonElement = document.querySelector("#hamburger");
+const drawerElement = document.querySelector("#drawer");
+const mainElement = document.querySelector("main");
 
-burger.addEventListener('click', function() {
-  this.classList.toggle('change')
-  sidebar.classList.toggle('change')
-  bgSidebar.classList.toggle('change')
-})
+hamburgerButtonElement.addEventListener("click", (event) => {
+  drawerElement.classList.toggle("open");
 
-bgSidebar.addEventListener('click', function() {
-  this.classList.remove('change')
-  sidebar.classList.remove('change')
-  burger.classList.remove('change')
-})
+  if (drawerElement.classList.contains("open")) {
+    hamburgerButtonElement.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+  } else {
+    hamburgerButtonElement.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+  }
+
+  event.stopPropagation();
+});
+
+mainElement.addEventListener("click", (event) => {
+  drawerElement.classList.remove("open");
+  event.stopPropagation();
+});
