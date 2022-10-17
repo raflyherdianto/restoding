@@ -5,9 +5,9 @@
       
         render() {
           this.innerHTML = `
-          <a href="#content" class="skip-link">Skip to Content</a>
+          <a href="../#content" class="skip-link">Skip to Content</a>
 
-          <a href="index.html" class="main-title">Restoding</a>
+          <a href="#/" class="main-title">Restoding</a>
     `;
         }
       }

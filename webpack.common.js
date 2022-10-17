@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const workboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -39,6 +40,16 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
+    }),
+    new workboxPlugin.GenerateSW({
+      swDest: 'sw.js',
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [{
+        // eslint-disable-next-line prefer-regex-literals
+        urlPattern: new RegExp('https://dicoding-restaurant-api.el.r.appspot.com/'),
+        handler: 'StaleWhileRevalidate',
+      }],
     }),
   ],
 };

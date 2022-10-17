@@ -1,7 +1,16 @@
-import "regenerator-runtime";
-import "../styles/main.css";
-import "./view/navigation.js";
-import "./view/skip-link.js"
-import main from "./view/view.js";
+import 'regenerator-runtime';
+import '../styles/main.css';
+import '../styles/loader.css';
+import './view/navigation';
+import './view/skip-link';
+import registerSW from './utils/register-sw';
+import Main from './view/main';
 
-document.addEventListener("DOMContentLoaded", main);
+document.addEventListener('DOMContentLoaded', () => {
+  registerSW();
+  Main.renderPage();
+});
+
+window.addEventListener('hashchange', () => {
+  Main.renderPage();
+});
